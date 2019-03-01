@@ -10,7 +10,7 @@ int main()
 
 int f(int x,int y){
 	int x1,y1,sum;
-	if(x!=0 || y!=0)
+	if(x==0 && y==0)
 	return 0;
 	x1=x%10;
 	y1=y%10;
@@ -23,7 +23,7 @@ int main()
 {
 	int x,y,sum=0;
 	int x1,y1;
-	scanf("%d%d",x,y);
+	scanf("%d%d",&x,&y);
 /*	while(x!=0 || y!=0){
 		
 		x1=x%10;
@@ -33,7 +33,7 @@ int main()
 		y/=10;	
 	
 	}  */
-	printf("%d",f(x,y)
+	printf("%d",f(x,y));
 	
 	
 	return 0;
