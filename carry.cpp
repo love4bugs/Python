@@ -8,33 +8,18 @@ int main()
 	return 0;
 }
 
-int f(long long int x,long long int y){
-	int x1,y1;
-	long long int sum;
-	if(x==0 && y==0)
-	return 0;
-	x1=x%10;
-	y1=y%10;
-	sum=f(x/10,y/10)*10+(x1+y1)%10;
-	return sum;
-}
 #include<cstdio>
 using namespace std;
 int main()
 {
-	long long int x,y;
+	long long int x,y,m=1,sum=0;
 	scanf("%lld%lld",&x,&y);
-/*	while(x!=0 || y!=0){
-		
-		x1=x%10;
-		y1=y%10;
-		sum=sum*10+(x1+y1)%10;
+    while(x!=0 || y!=0){
+		sum+=((x%10+y%10)%10)*m;
 		x/=10;
-		y/=10;	
-	
-	}  */
-	printf("%lld",f(x,y));
-	
-	
+		y/=10;
+		m*=10;	
+	} 
+	printf("%lld",sum);
 	return 0;
 }
