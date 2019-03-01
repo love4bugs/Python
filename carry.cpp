@@ -8,8 +8,9 @@ int main()
 	return 0;
 }
 
-int f(int x,int y){
-	int x1,y1,sum;
+int f(long long int x,long long int y){
+	int x1,y1;
+	long long int sum;
 	if(x==0 && y==0)
 	return 0;
 	x1=x%10;
@@ -21,9 +22,8 @@ int f(int x,int y){
 using namespace std;
 int main()
 {
-	int x,y,sum=0;
-	int x1,y1;
-	scanf("%d%d",&x,&y);
+	long long int x,y;
+	scanf("%lld%lld",&x,&y);
 /*	while(x!=0 || y!=0){
 		
 		x1=x%10;
@@ -33,7 +33,7 @@ int main()
 		y/=10;	
 	
 	}  */
-	printf("%d",f(x,y));
+	printf("%lld",f(x,y));
 	
 	
 	return 0;
